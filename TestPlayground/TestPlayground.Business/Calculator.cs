@@ -3,7 +3,7 @@ using System.Diagnostics.Contracts;
 
 namespace TestPlayground.Business
 {
-    public class Calculator
+    public class Calculator : ICalculator
     {
         public int Add(int a, int b)
         {

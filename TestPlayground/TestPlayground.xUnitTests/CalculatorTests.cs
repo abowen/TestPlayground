@@ -6,7 +6,7 @@ namespace TestPlayground.xUnitTests
     public class CalculatorTests
     {
         [Fact]
-        public void ShouldAdd()
+        public void AddUnitTest()
         {
             // ARRANGE
             var calculator = new Calculator();
