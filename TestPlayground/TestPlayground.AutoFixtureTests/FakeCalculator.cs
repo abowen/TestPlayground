@@ -8,7 +8,7 @@ namespace TestPlayground.AutoFixtureTests
     public class FakeRepository : IRepository
     {
         public IEnumerable<Person> GetPeople()
-        {
+        {            
             var person = new Person
             {
                 DateOfBirth = new DateTime(1955, 5, 5),

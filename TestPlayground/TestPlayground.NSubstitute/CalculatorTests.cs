@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
-using TestPlayground.Business;
 using TestPlayground.Business.Interfaces;
 
 namespace TestPlayground.NSubstituteTests

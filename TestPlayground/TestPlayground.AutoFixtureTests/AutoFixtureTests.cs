@@ -2,6 +2,7 @@
 using Ploeh.AutoFixture;
 using TestPlayground.Business.Entities;
 using TestPlayground.Business.Interfaces;
+using TestPlayground.Business.Services;
 
 namespace TestPlayground.AutoFixtureTests
 {
@@ -9,7 +10,7 @@ namespace TestPlayground.AutoFixtureTests
     public class AutoFixtureTests
     {
         [TestMethod]
-        public void FixtureCreatePrimitiveTest()
+        public void Fixture_Create_Primitive_Property_Test()
         {
             // ARRANGE
             var fixture = new Fixture();
@@ -24,7 +25,7 @@ namespace TestPlayground.AutoFixtureTests
         }
 
         [TestMethod]
-        public void FixtureCreateComplexTest()
+        public void Fixture_Create_Complex_Class_Test()
         {
             // ARRANGE
             var fixture = new Fixture();
@@ -39,7 +40,7 @@ namespace TestPlayground.AutoFixtureTests
         }
 
         [TestMethod]
-        public void FixtureRegisterInterfaceTest()
+        public void Fixture_Register_Interface_Using_Custom_Dependency_Test()
         {
             // ARRANGE
             var fixture = new Fixture();
@@ -51,6 +52,21 @@ namespace TestPlayground.AutoFixtureTests
 
             // ASSERT
             Assert.IsTrue(result > 0);
-        }                
+        }
+
+        [TestMethod]
+        public void Fixture_Register_Interface_Using_Fixture_Dependency_Test()
+        {
+            // ARRANGE
+            var fixture = new Fixture();
+            fixture.Register<IRepository>(() => new FixtureRepository());
+            var systemUnderTest = fixture.Create<EmployeeReporting>();
+
+            // ACT
+            var result = systemUnderTest.TotalEmployees();
+
+            // ASSERT
+            Assert.IsTrue(result > 0);
+        }            
     }
 }

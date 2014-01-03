@@ -54,6 +54,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AutoFixtureTests.cs" />
+    <Compile Include="FixtureCalculator.cs" />
     <Compile Include="FakeCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

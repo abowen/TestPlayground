@@ -1,5 +1,4 @@
-﻿using TestPlayground.Business;
-using TestPlayground.Business.Entities;
+﻿using TestPlayground.Business.Entities;
 using Xunit;
 
 namespace TestPlayground.xUnitTests

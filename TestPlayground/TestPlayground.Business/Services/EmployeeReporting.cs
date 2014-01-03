@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using TestPlayground.Business.Interfaces;
 
-namespace TestPlayground.Business.Entities
+namespace TestPlayground.Business.Services
 {
     public class EmployeeReporting
     {
