@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Diagnostics.Contracts;
+using TestPlayground.Business.Interfaces;
 
-namespace TestPlayground.Business
+namespace TestPlayground.Business.Entities
 {
     public class Calculator : ICalculator
     {

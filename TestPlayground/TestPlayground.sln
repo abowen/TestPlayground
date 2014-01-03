@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPlayground.Business", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPlayground.xUnitTests", "TestPlayground.xUnitTests\TestPlayground.xUnitTests.csproj", "{49B28521-3B71-436D-9DD4-7433A34D555F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPlayground.NSubstitute", "TestPlayground.NSubstitute\TestPlayground.NSubstitute.csproj", "{AC7E26F7-0BE2-46B1-BFA1-D7B09E251778}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPlayground.NSubstituteTests", "TestPlayground.NSubstitute\TestPlayground.NSubstituteTests.csproj", "{AC7E26F7-0BE2-46B1-BFA1-D7B09E251778}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPlayground.AutoFixtureTests", "TestPlayground.AutoFixtureTests\TestPlayground.AutoFixtureTests.csproj", "{7DF924A3-E3B0-4894-B2B9-A683D035F028}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{AC7E26F7-0BE2-46B1-BFA1-D7B09E251778}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC7E26F7-0BE2-46B1-BFA1-D7B09E251778}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC7E26F7-0BE2-46B1-BFA1-D7B09E251778}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DF924A3-E3B0-4894-B2B9-A683D035F028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DF924A3-E3B0-4894-B2B9-A683D035F028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DF924A3-E3B0-4894-B2B9-A683D035F028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DF924A3-E3B0-4894-B2B9-A683D035F028}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

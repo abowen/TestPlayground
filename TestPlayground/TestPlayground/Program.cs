@@ -1,5 +1,6 @@
 ﻿using System;
 using TestPlayground.Business;
+using TestPlayground.Business.Entities;
 
 namespace TestPlayground
 {

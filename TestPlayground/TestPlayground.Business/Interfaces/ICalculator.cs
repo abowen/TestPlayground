@@ -1,4 +1,4 @@
-﻿namespace TestPlayground.Business
+﻿namespace TestPlayground.Business.Interfaces
 {
     public interface ICalculator
     {

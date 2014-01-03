@@ -1,4 +1,6 @@
-﻿namespace TestPlayground.Business
+﻿using TestPlayground.Business.Interfaces;
+
+namespace TestPlayground.Business.Entities
 {
     public class Triangle : IShape
     {
