@@ -23,5 +23,19 @@ namespace TestPlayground.xUnitTests
             // ASSERT
             Assert.Equal(expectedResult, result);
         }
+
+        [Theory]
+        [PropertyData("TestData", PropertyType = typeof(PropertyTestDataSource))]        
+        public void PropertyDataTest(int value, bool expectedResult)
+        {
+            // ARRANGE
+            var calculator = new Calculator();
+
+            // ACT
+            var result = calculator.IsGreaterThanZero(value);
+
+            // ASSERT
+            Assert.Equal(expectedResult, result);
+        }
     }
 }

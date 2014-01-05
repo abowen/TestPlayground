@@ -12,8 +12,7 @@ namespace TestPlayground.Business.Entities
         }
 
         public int Divide(int a, int b)
-        {
-            Contract.Assert(b != 0);
+        {            
             return a / b;
         }
 
