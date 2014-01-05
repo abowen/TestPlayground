@@ -3,7 +3,7 @@ using Xunit;
 
 namespace TestPlayground.xUnitTests
 {
-    public class CalculatorTests
+    public class AssertTests
     {
         [Fact]
         public void AddUnitTest()

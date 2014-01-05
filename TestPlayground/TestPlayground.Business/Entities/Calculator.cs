@@ -30,5 +30,10 @@ namespace TestPlayground.Business.Entities
             }
             return a - b;
         }
+
+        public bool IsGreaterThanZero(int a)
+        {
+            return a > 0;
+        }
     }
 }
