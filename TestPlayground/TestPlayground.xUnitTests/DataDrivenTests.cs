@@ -37,5 +37,19 @@ namespace TestPlayground.xUnitTests
             // ASSERT
             Assert.Equal(expectedResult, result);
         }
+
+        [Theory]
+        [ExcelData("ExcelDataSource.xls", "Select * from TestData")]
+        public void ExcelDataTest(int value, bool expectedResult)
+        {
+            // ARRANGE
+            var calculator = new Calculator();
+
+            // ACT
+            var result = calculator.IsGreaterThanZero(value);
+
+            // ASSERT
+            Assert.Equal(expectedResult, result);
+        }
     }
 }
