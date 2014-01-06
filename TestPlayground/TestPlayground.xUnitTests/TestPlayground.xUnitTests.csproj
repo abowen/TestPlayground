@@ -64,6 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssertTests.cs" />
+    <Compile Include="Attributes\CategoryAttribute.cs" />
+    <Compile Include="Attributes\RangeDataAttribute.cs" />
+    <Compile Include="Attributes\SmokeTestAttribute.cs" />
+    <Compile Include="TraitTests.cs" />
     <Compile Include="DataDrivenTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyTestDataSource.cs" />

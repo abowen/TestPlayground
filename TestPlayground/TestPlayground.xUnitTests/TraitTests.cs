@@ -4,10 +4,11 @@ using Xunit;
 
 namespace TestPlayground.xUnitTests
 {
-    public class AssertTests
+    public class TraitTests
     {
-        [Fact]        
-        public void EqualTest()
+        [Fact]
+        [Trait("Category", "TraitExample")]
+        public void TraitExampleOneTest()
         {
             // ARRANGE
             var calculator = new Calculator();
@@ -19,8 +20,9 @@ namespace TestPlayground.xUnitTests
             Assert.Equal(7, result);
         }
 
-        [Fact]        
-        public void ExceptionTest()
+        [Fact]
+        [Trait("Category", "TraitExample")]
+        public void TraitExampleTwoTest()
         {
             // ARRANGE
             var calculator = new Calculator();
@@ -32,7 +34,9 @@ namespace TestPlayground.xUnitTests
         }
 
         [Fact]
-        public void IsTypeTest()
+        [Category("CustomTraitAttribute")]
+        [SmokeTest]
+        public void CustomTraitAttributeTest()
         {
             // ARRANGE
             var calculator = new Calculator();
@@ -43,5 +47,6 @@ namespace TestPlayground.xUnitTests
             // ASSERT
             Assert.IsType<bool>(returnValue);
         }
+
     }
 }

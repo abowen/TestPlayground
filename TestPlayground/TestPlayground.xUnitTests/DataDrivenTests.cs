@@ -1,4 +1,5 @@
 ﻿using TestPlayground.Business.Entities;
+using TestPlayground.xUnitTests.Attributes;
 using Xunit;
 using Xunit.Extensions;
 
@@ -50,6 +51,20 @@ namespace TestPlayground.xUnitTests
 
             // ASSERT
             Assert.Equal(expectedResult, result);
+        }
+
+        [Theory]
+        [RangeData(1, 10)]
+        public void CustomAttributeTest(int value)
+        {
+            // ARRANGE
+            var calculator = new Calculator();
+
+            // ACT
+            var result = calculator.IsGreaterThanZero(value);
+
+            // ASSERT
+            Assert.True(result);
         }
     }
 }
