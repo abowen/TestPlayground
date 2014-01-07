@@ -1,11 +1,10 @@
 ﻿using Xunit;
 
-namespace TestPlayground.xUnitTests
+namespace TestPlayground.xUnitTests.Attributes
 {
     public class SmokeTestAttribute : TraitAttribute
     {
-        public SmokeTestAttribute()
-            : base("Category", "SmokeTest")
+        public SmokeTestAttribute() : base("Category", "SmokeTest")
         {
         }
     }

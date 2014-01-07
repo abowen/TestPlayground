@@ -1,5 +1,6 @@
 ﻿using System;
 using TestPlayground.Business.Entities;
+using TestPlayground.xUnitTests.Attributes;
 using Xunit;
 
 namespace TestPlayground.xUnitTests

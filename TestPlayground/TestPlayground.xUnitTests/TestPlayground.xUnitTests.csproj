@@ -70,7 +70,7 @@
     <Compile Include="TraitTests.cs" />
     <Compile Include="DataDrivenTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PropertyTestDataSource.cs" />
+    <Compile Include="DataSources\PropertyTestDataSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ExcelDataSource.xls">

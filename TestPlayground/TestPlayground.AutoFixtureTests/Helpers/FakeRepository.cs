@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TestPlayground.Business.Entities;
 using TestPlayground.Business.Interfaces;
 
-namespace TestPlayground.AutoFixtureTests
+namespace TestPlayground.AutoFixtureTests.Helpers
 {
     public class FakeRepository : IRepository
     {

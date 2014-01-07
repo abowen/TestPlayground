@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace TestPlayground.xUnitTests
+namespace TestPlayground.xUnitTests.Attributes
 {
     public class CategoryAttribute : TraitAttribute
     {

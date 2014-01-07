@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Calculator.cs" />
+    <Compile Include="Interfaces\IPersonFilter.cs" />
     <Compile Include="Services\EmployeeReporting.cs" />
     <Compile Include="Entities\Person.cs" />
     <Compile Include="Interfaces\IRepository.cs" />

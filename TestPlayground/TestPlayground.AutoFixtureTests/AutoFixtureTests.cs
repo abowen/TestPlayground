@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Ploeh.AutoFixture;
+using TestPlayground.AutoFixtureTests.Helpers;
 using TestPlayground.Business.Entities;
 using TestPlayground.Business.Interfaces;
 using TestPlayground.Business.Services;
@@ -10,7 +11,7 @@ namespace TestPlayground.AutoFixtureTests
     public class AutoFixtureTests
     {
         [TestMethod]
-        public void Fixture_Create_Primitive_Property_Test()
+        public void Fixture_Create_Integer_Test()
         {
             // ARRANGE
             var fixture = new Fixture();
@@ -25,14 +26,41 @@ namespace TestPlayground.AutoFixtureTests
         }
 
         [TestMethod]
+        public void Fixture_Create_String_Test()
+        {
+            // ARRANGE
+            var fixture = new Fixture();
+            var expectedNumber = fixture.Create<string>();
+            
+            // ACT
+            var systemUnderTest = new Person { FirstName = expectedNumber };
+
+            // ASSERT
+            Assert.IsFalse(string.IsNullOrWhiteSpace(systemUnderTest.FirstName));
+        }
+
+        [TestMethod]
+        public void Fixture_Prefix_String_Test()
+        {
+            // ARRANGE
+            var fixture = new Fixture();
+            var expectedNumber = fixture.Create("Prefix_");
+
+            // ACT
+            var systemUnderTest = new Person { FirstName = expectedNumber };
+
+            // ASSERT
+            Assert.IsTrue(systemUnderTest.FirstName.StartsWith("Prefix_"));
+        }
+
+        [TestMethod]
         public void Fixture_Create_Complex_Class_Test()
         {
             // ARRANGE
             var fixture = new Fixture();
             var systemUnderTest = fixture.Create<Person>();
 
-            // ACT
-            
+            // ACT            
 
             // ASSERT
             Assert.IsFalse(string.IsNullOrWhiteSpace(systemUnderTest.FirstName));
@@ -45,6 +73,7 @@ namespace TestPlayground.AutoFixtureTests
             // ARRANGE
             var fixture = new Fixture();
             fixture.Register<IRepository>(() => new FakeRepository());
+            fixture.Register<IPersonFilter>(() => new FakePersonFilter());
             var systemUnderTest = fixture.Create<EmployeeReporting>();
 
             // ACT
@@ -60,6 +89,7 @@ namespace TestPlayground.AutoFixtureTests
             // ARRANGE
             var fixture = new Fixture();
             fixture.Register<IRepository>(() => new FixtureRepository());
+            fixture.Register<IPersonFilter>(() => new FixturePersonFilter());
             var systemUnderTest = fixture.Create<EmployeeReporting>();
 
             // ACT

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TestPlayground.xUnitTests
+namespace TestPlayground.xUnitTests.DataSources
 {
     public static class PropertyTestDataSource
     {
