@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Ploeh.AutoFixture;
-using TestPlayground.AutoFixtureTests.Helpers;
+using TestPlayground.AutoFixtureTests.Mocks;
 using TestPlayground.Business.Entities;
 using TestPlayground.Business.Interfaces;
 using TestPlayground.Business.Services;
@@ -73,7 +73,7 @@ namespace TestPlayground.AutoFixtureTests
             // ARRANGE
             var fixture = new Fixture();
             fixture.Register<IRepository>(() => new FakeRepository());
-            fixture.Register<IPersonFilter>(() => new FakePersonFilter());
+            fixture.Register<ILogger>(() => new FakeLogger());            
             var systemUnderTest = fixture.Create<EmployeeReporting>();
 
             // ACT
@@ -89,7 +89,7 @@ namespace TestPlayground.AutoFixtureTests
             // ARRANGE
             var fixture = new Fixture();
             fixture.Register<IRepository>(() => new FixtureRepository());
-            fixture.Register<IPersonFilter>(() => new FixturePersonFilter());
+            fixture.Register<ILogger>(() => new FakeLogger());            
             var systemUnderTest = fixture.Create<EmployeeReporting>();
 
             // ACT

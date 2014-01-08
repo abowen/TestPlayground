@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TestPlayground.Business.Entities;
 using TestPlayground.Business.Interfaces;
 
-namespace TestPlayground.AutoFixtureTests.Helpers
+namespace TestPlayground.AutoFixtureTests.Mocks
 {
     public class FakeRepository : IRepository
     {
@@ -16,6 +16,11 @@ namespace TestPlayground.AutoFixtureTests.Helpers
                 LastName = "Test"
             };
             return new List<Person> { person };
+        }
+
+        public void CreatePerson(Person person)
+        {
+            throw new NotImplementedException();
         }
     }
 }

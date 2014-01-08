@@ -17,8 +17,8 @@ namespace TestPlayground.xUnitAutoMoqTests
         {
             // ARRANGE
             var mockRepository = new Mock<IRepository>();
-            var mockFilter = new Mock<IPersonFilter>();
-            var sut = new EmployeeReporting(mockRepository.Object, mockFilter.Object);
+            var mockLogger = new Mock<ILogger>();
+            var sut = new EmployeeReporting(mockRepository.Object, mockLogger.Object);
 
             // ACT
             var employees = sut.TotalEmployees();
@@ -44,7 +44,7 @@ namespace TestPlayground.xUnitAutoMoqTests
 
         [Theory]
         [AutoFixtureMoqAutoData]
-        public void WithAutoMockingAttribute([Frozen] Mock<IRepository> mockRepository, [Frozen] Mock<IPersonFilter> personFilter, EmployeeReporting sut)
+        public void WithAutoMockingAttribute([Frozen] Mock<IRepository> mockRepository, [Frozen] Mock<ILogger> mockLogger, EmployeeReporting sut)
         {
             // ARRANGE            
 

@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using TestPlayground.Business.Entities;
 using TestPlayground.Business.Interfaces;
 
 namespace TestPlayground.Business.Services
@@ -6,17 +8,35 @@ namespace TestPlayground.Business.Services
     public class EmployeeReporting
     {
         private readonly IRepository _repository;
-        private readonly IPersonFilter _personFilter;
+        private readonly ILogger _logger;
 
-        public EmployeeReporting(IRepository repository, IPersonFilter personFilter)
+        public EmployeeReporting(IRepository repository, ILogger logger)
         {
             _repository = repository;
-            _personFilter = personFilter;
+            _logger = logger;
         }
 
-        public int TotalEmployees()
+        private static bool DefaultFilter(Person person)
         {
-            return _repository.GetPeople().Count(_personFilter.Filter);
+            return true;
+        }
+
+        public int TotalEmployees(Func<Person, bool> userFilter = null)
+        {
+            var personFilter = userFilter ?? DefaultFilter;
+            return _repository.GetPeople().Where(personFilter).Count();
+        }
+
+        public void SaveEmployee(Employee employee)
+        {
+            if (employee == null)
+            {
+                _logger.LogError("Missing Value");
+            }
+            else
+            {
+                _repository.CreatePerson(employee);
+            }
         }
     }
 }

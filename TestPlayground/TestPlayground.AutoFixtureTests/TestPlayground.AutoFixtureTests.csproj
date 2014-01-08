@@ -72,10 +72,9 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AutoFixtureTests.cs" />
-    <Compile Include="Helpers\FixturePersonFilter.cs" />
-    <Compile Include="Helpers\FakePersonFilter.cs" />
-    <Compile Include="Helpers\FixtureRepository.cs" />
-    <Compile Include="Helpers\FakeRepository.cs" />
+    <Compile Include="Mocks\FakeLogger.cs" />
+    <Compile Include="Mocks\FixtureRepository.cs" />
+    <Compile Include="Mocks\FakeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

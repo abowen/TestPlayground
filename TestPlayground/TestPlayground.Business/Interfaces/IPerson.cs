@@ -2,7 +2,7 @@
 
 namespace TestPlayground.Business.Interfaces
 {
-    interface IPerson
+    public interface IPerson
     {
         string FirstName { get; set; }
         string LastName { get; set; }

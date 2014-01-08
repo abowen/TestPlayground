@@ -6,5 +6,7 @@ namespace TestPlayground.Business.Interfaces
     public interface IRepository
     {
         IEnumerable<Person> GetPeople();
+
+        void CreatePerson(Person person);
     }
 }
